@@ -48,6 +48,7 @@ p{
   #srch{
   	margin-right: 10%;
   	margin-left: 5%;
+    
   }
 
   #addres{
@@ -67,4 +68,8 @@ p{
 
   #tb{
   	  background-color: rgb(219, 128, 25);
+  }
+
+ md-input-container{
+  width: 100%;
   }
