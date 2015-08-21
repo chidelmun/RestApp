@@ -5,6 +5,7 @@
     <meta name="viewport" content="initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
+  <title>Find meals close to you</title>
   <body layout="column" ng-controller="AppCtrl">
     <md-toolbar id="tb" layout="row">
       <div class="md-toolbar-tools">
@@ -33,7 +34,6 @@
         <label>City</label>
         <input required name="clientName" ng-model="project.clientCity">
         <div ng-messages="projectForm.clientName.$error">
-          <!-- <div ng-message="required">This is required.</div> -->
         </div>
 
       </md-input-container>
@@ -56,13 +56,13 @@
     </md-toolbar>
 
 
-  <div ng-controller="AppCtrl as appCtrl"  style= "background-color:crimson; background-image: url('http://www.thelalit.com/d/the-lalit-new-delhi/media/TheLalitNewDelhi/FoodBeverage_Restaurants/24_7Restaurant/24-7RestaurantDelhi.jpg');" >
+  <div ng-controller="AppCtrl as appCtrl"  style= "background-image: url('http://www.thelalit.com/d/the-lalit-new-delhi/media/TheLalitNewDelhi/FoodBeverage_Restaurants/24_7Restaurant/24-7RestaurantDelhi.jpg');" >
   <md-grid-list
         md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
         md-row-height-gt-md="1:1" md-row-height="2:2"
         md-gutter="12px" md-gutter-gt-sm="8px" >
 
-    <md-grid-tile  style= "background-color:crimson; background-image: url('http://www.thelalit.com/d/the-lalit-new-delhi/media/TheLalitNewDelhi/FoodBeverage_Restaurants/24_7Restaurant/24-7RestaurantDelhi.jpg');" class="gray"
+    <md-grid-tile  style= "background-image: url('http://www.thelalit.com/d/the-lalit-new-delhi/media/TheLalitNewDelhi/FoodBeverage_Restaurants/24_7Restaurant/24-7RestaurantDelhi.jpg');" class="gray"
         md-rowspan="3" md-colspan="2" md-colspan-sm="1">
         
         <h3> Find Food close to You</h3>
@@ -72,20 +72,20 @@
       </md-grid-tile-footer>
     </md-grid-tile>
 
-    <md-grid-tile style="background-color: cornflowerblue;background-image: url('http://www.getholistichealth.com/wp-content/uploads/2013/01/Restaurant.jpg');"  class="green">
+    <md-grid-tile style="background-image: url('http://www.getholistichealth.com/wp-content/uploads/2013/01/Restaurant.jpg');"  class="green">
       <md-grid-tile-footer>
         <h3 style="font-size: 23px;"><a href="">Oxford Guest House</a></h3>
       </md-grid-tile-footer>
     </md-grid-tile>
 
 
-    <md-grid-tile class="yellow"    style="background-color: beige;background-image: url('https://hawksworthrestaurant.com/wp-content/uploads/2013/06/Hawksworth-Restaurant-Squid-Ceviche-home.jpg') ">
+    <md-grid-tile class="yellow"    style="background-image: url('https://hawksworthrestaurant.com/wp-content/uploads/2013/06/Hawksworth-Restaurant-Squid-Ceviche-home.jpg') ">
       <md-grid-tile-footer>
         <h3 style="font-size: 23px;"><a href="">Rhema Restaurant</a></h3>
       </md-grid-tile-footer>
     </md-grid-tile>
 
-    <md-grid-tile class="blue"  style="background-color: navy;background-image: url('http://efdreams.com/data_images/dreams/restaurant/restaurant-03.jpg')"
+    <md-grid-tile class="blue"  style="background-image: url('http://efdreams.com/data_images/dreams/restaurant/restaurant-03.jpg')"
         md-rowspan="2">
       <md-grid-tile-footer>
         <h3 style="font-size: 23px;"><a href="">El Classico</a></h3>
@@ -93,7 +93,7 @@
     </md-grid-tile>
 
 
-    <md-grid-tile class="red" style="background-color: cornflowerblue;background-image: url('http://rickbakas.com/wp-content/uploads/2011/03/restaurant.jpg')"
+    <md-grid-tile class="red" style="background-image: url('http://rickbakas.com/wp-content/uploads/2011/03/restaurant.jpg')"
         md-rowspan="2" md-colspan="2" md-colspan-sm="1">
       <md-grid-tile-footer>
         <h3 style="font-size: 23px;"><a href="">Mr Kleen Restaurant</a></h3>
@@ -101,7 +101,7 @@
     </md-grid-tile>
 
 
-    <md-grid-tile class="green" style="background-color: aqua;background-image: url('http://www.nairaland.com/attachments/519145_5331749793_aef9def4e7_jpg49c06f3790b3b66b2050b688588efc4b')"
+    <md-grid-tile class="green" style="background-image: url('http://www.nairaland.com/attachments/519145_5331749793_aef9def4e7_jpg49c06f3790b3b66b2050b688588efc4b')"
         md-rowspan="2" >
       <md-grid-tile-footer>
         <h3 style="font-size: 23px;"><a href="">Twist Restaurant </a></h3>
