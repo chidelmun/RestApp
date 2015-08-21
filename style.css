@@ -32,16 +32,19 @@ p{
 
   #searchf{
   	margin-left: 10%;
-  	margin-top: 10%;
+  	margin-top: 20%;
   	width: 150%;
   }
 
   #searchf2{
   	width: 150%;
-  	margin-top: 10%;
+  	margin-top: 20%;
    margin-left: 110%;
   }
 
   md-toolbar{
   	height: 20%;
+  }
+  #srch{
+  	margin-right: 10%;
   }
