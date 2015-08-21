@@ -6,12 +6,15 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body layout="column" ng-controller="AppCtrl">
-    <md-toolbar layout="row">
+    <md-toolbar id="tb" layout="row">
       <div class="md-toolbar-tools">
         <md-button ng-click="toggleSidenav('left')" hide-gt-sm class="md-icon-button">
           <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
         </md-button>
-        <h1>MrMunch</h1>
+
+        <img id="logo" src="http://graphics8.nytimes.com/images/2010/03/19/blogs/19cityroomMtrain/19cityroomMtrain-thumbStandard.jpg">
+
+        <h1 id="nam">MrMunch</h1>
     
     <form name="projectForm" >
      <md-input-container  id="searchf">
@@ -43,8 +46,8 @@
       <section id="srch" layout="row" layout-sm="column" layout-align="center center">
       <md-button class="md-raised md-primary"> Search</md-button>
     </section>
-      
-    <section layout="row" layout-sm="column" layout-align="center center">
+
+    <section id="addres" layout="row" layout-sm="column" layout-align="center center">
       <md-button class="md-raised md-primary"> + Restaurant</md-button>
     </section>
 
