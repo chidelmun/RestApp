@@ -12,13 +12,37 @@
           <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
         </md-button>
         <h1>MrMunch</h1>
+    
+    <form name="projectForm" >
+     <md-input-container  id="searchf">
+        <label>Search Meal Here</label>
+        <input required name="clientName" ng-model="project.clientName">
+        <div ng-messages="projectForm.clientName.$error">
+          <!-- <div ng-message="required">This is required.</div> -->
+        </div>
+
+      </md-input-container>
+      </form>
+  
+
+     <form name="projectForm2" >
+     <md-input-container  id="searchf2">
+        <label>City</label>
+        <input required name="clientName" ng-model="project.clientName">
+        <div ng-messages="projectForm.clientName.$error">
+          <!-- <div ng-message="required">This is required.</div> -->
+        </div>
+
+      </md-input-container>
+      </form>
+
       </div><br>
 
       <section layout="row" layout-sm="column" layout-align="center center">
      <!--  <md-button class="md-raised">Button</md-button> -->
-      <md-button class="md-raised md-primary">Primary</md-button>
+      <md-button class="md-raised md-primary"> + Restaurant</md-button>
       <!-- <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button> -->
-      <md-button class="md-raised md-warn">Warn</md-button>
+      <!-- <md-button class="md-raised md-warn">Warn</md-button> -->
   
     </section>
 
@@ -152,6 +176,15 @@ angular.module('inputErrorsApp', ['ngMaterial', 'ngMessages'])
 
   angular.module('gridListDemo1', ['ngMaterial'])
 .controller('AppCtrl', function($scope) {});
+
+
+angular.module('inputErrorsApp', ['ngMaterial', 'ngMessages'])
+.controller('AppCtrl', function($scope) {
+  $scope.project = {
+    description: 'Nuclear Missile Defense System',
+    rate: 500
+  };
+});
 
     </script>
 

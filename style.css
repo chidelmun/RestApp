@@ -40,3 +40,15 @@ p{
 	color: aliceblue;
 }
 
+.inputdemoErrors .inputErrorsApp {
+  min-height: 48px; }
+
+  #searchf{
+  	margin-left: 10%;
+  	width: 150%;
+  }
+
+  #searchf2{
+  	width: 150%;
+   margin-left: 110%;
+  }
