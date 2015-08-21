@@ -28,7 +28,7 @@
      <form name="projectForm2" >
      <md-input-container  id="searchf2">
         <label>City</label>
-        <input required name="clientName" ng-model="project.clientName">
+        <input required name="clientName" ng-model="project.clientCity">
         <div ng-messages="projectForm.clientName.$error">
           <!-- <div ng-message="required">This is required.</div> -->
         </div>
@@ -36,65 +36,21 @@
       </md-input-container>
       </form>
 
+
       </div><br>
 
-      <section layout="row" layout-sm="column" layout-align="center center">
-     <!--  <md-button class="md-raised">Button</md-button> -->
+    
+
+    <section layout="row" layout-sm="column" layout-align="center center">
       <md-button class="md-raised md-primary"> + Restaurant</md-button>
-      <!-- <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button> -->
-      <!-- <md-button class="md-raised md-warn">Warn</md-button> -->
-  
+    </section>
+
+    <section layout="row" layout-sm="column" layout-align="center center">
+      <md-button class="md-raised md-primary"> + Restaurant</md-button>
     </section>
 
     </md-toolbar>
-<!-- 
-<div ng-controller="AppCtrl" layout="column">
-  <md-content layout-padding>
-    <form name="projectForm">
-      <md-input-container>
-        <label>Restaurant Name</label>
-        <input required name="clientName" ng-model="project.clientName">
-        <div ng-messages="projectForm.clientName.$error">
-          <div ng-message="required">This is required.</div>
-        </div>
-      </md-input-container>
 
-      <md-input-container>
-        <label>City</label>
-        <input required name="clientName" ng-model="project.clientName">
-        <div ng-messages="projectForm.clientName.$error">
-          <div ng-message="required">This is required.</div>
-        </div>
-      </md-input-container>
-
-      <md-input-container>
-        <label>Address</label>
-        <input required name="clientName" ng-model="project.clientName">
-        <div ng-messages="projectForm.clientName.$error">
-          <div ng-message="required">This is required.</div>
-        </div>
-      </md-input-container>
-
-      <md-input-container>
-        <label>Phone Number</label>
-        <input required name="clientName" ng-model="project.clientName">
-        <div ng-messages="projectForm.clientName.$error">
-          <div ng-message="required">This is required.</div>
-        </div>
-      </md-input-container>
-
-      <md-input-container>
-        <label>Email</label>
-        <input required name="clientName" ng-model="project.clientName">
-        <div ng-messages="projectForm.clientName.$error">
-          <div ng-message="required">This is required.</div>
-        </div>
-      </md-input-container>
-
-    </form>
-  </md-content>
-</div>
- -->
 
   <div ng-controller="AppCtrl as appCtrl"  style= "background-color:crimson; background-image: url('http://www.thelalit.com/d/the-lalit-new-delhi/media/TheLalitNewDelhi/FoodBeverage_Restaurants/24_7Restaurant/24-7RestaurantDelhi.jpg');" >
   <md-grid-list
