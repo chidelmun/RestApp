@@ -31,3 +31,11 @@
   md-grid-title.gray {
   	background-color: red;
   }
+a{
+	text-decoration: none;
+	  color: aliceblue;
+}
+
+p{
+	color: aliceblue;
+}
