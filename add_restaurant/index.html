@@ -4,6 +4,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
     <meta name="viewport" content="initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="style.css">
+    <style type="text/css">
+    #addrestau{
+        width: 235%;
+    }
+    </style>
   </head>
   <title>Find meals close to you</title>
   <body layout="column" ng-controller="AppCtrl">
@@ -18,11 +23,11 @@
         </a>
 
       </div><br>
-
+       <div ng-controller="appctr">
     <section id="srch" layout="row" layout-sm="column" layout-align="center center">
-      <md-button class="md-raised md-primary"  ng-click="showAdvanced($event)" flex flex-md="100"> Login</md-button>
+      <md-button class="md-raised md-primary"  ng-click="showDialog($event)"> Login</md-button>
     </section>
-
+    </div>
   </md-toolbar>
 
 
@@ -151,28 +156,86 @@
  
 }]);
 
-angular.module('inputErrorsApp', ['ngMaterial', 'ngMessages'])
-.controller('AppCtrl', function($scope) {
-  $scope.project = {
-    description: 'Nuclear Missile Defense System',
-    rate: 500
-  };
-});
-
-  angular.module('gridListDemo1', ['ngMaterial'])
-.controller('AppCtrl', function($scope) {});
-
-
-angular.module('inputErrorsApp', ['ngMaterial', 'ngMessages'])
-.controller('AppCtrl', function($scope) {
-  $scope.project = {
-    description: 'Nuclear Missile Defense System',
-    rate: 500
-  };
-});
-
-
   /*Login controller functions*/
+  app.controller('AppCtrl', ['$scope', '$mdSidenav', function($scope, $mdSidenav){
+      $scope.toggleSidenav = function(menuId) {
+    $mdSidenav(menuId).toggle();
+  };
+ 
+}]);
+
+
+app.controller('appctr', ['$scope', '$mdDialog', function($scope, $mdDialog){
+  var alert;
+  $scope.showDialog = showDialog;
+  $scope.items = [1,2,3];
+  
+  function showDialog($event) {
+    var parentEl = angular.element(document.querySelector('md-content'));
+    alert = $mdDialog.alert({
+      parent: parentEl,
+      targetEvent: $event,
+      template:
+        '<md-dialog style="width: 51%;height:40%" aria-label="Sample Dialog">' +
+        '  <md-content>'+
+
+        '    <form id="loginform"> '+
+              
+        '<md-input-container>' +
+         '   <label>Username or Email</label>'+
+         ' <input style="width:200%" required name="clientName" ng-model="project.clientName">'+
+           ' <div ng-messages="projectForm.clientName.$error">'+
+            '<div ng-message="required">This is required.</div>'+
+           ' </div>'+
+        '</md-input-container>'+
+
+         '<md-input-container>' +
+         '   <label>Password</label>'+
+         ' <input style="width:200%" type="password" required name="clientName" ng-model="project.passwd">'+
+           ' <div ng-messages="projectForm.clientName.$error">'+
+            '<div ng-message="required">This is required.</div>'+
+           ' </div>'+
+        '</md-input-container>'+
+
+        '  </md-content>' +
+        '  <div class="md-actions">' +
+        '    <md-button ng-click="ctrl.closeDialog()">' +
+        '      Login' +
+        '    </md-button>' +
+        '  </div>' +
+        '</form>'+
+        '</md-dialog>',
+        locals: {
+          items: $scope.items,
+          closeDialog: $scope.closeDialog
+        },
+        bindToController: true,
+        controllerAs: 'ctrl',
+        controller: 'DialogController'
+    });
+    
+    $mdDialog
+      .show( alert )
+      .finally(function() {
+        alert = undefined;
+      });
+  }
+  $scope.closeDialog = function() {
+    $mdDialog.hide();
+  };
+}])
+.controller('DialogController', function($scope, $mdDialog) {
+  //alert( this.closeDialog );
+  //this.closeDialog = $scope.closeDialog;
+  
+    /*$scope.closeDialog = function() {
+      $mdDialog.hide();
+    };*/
+});
+
+
+
+
 
     </script>
 
