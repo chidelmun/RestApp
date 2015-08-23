@@ -10,15 +10,14 @@
   md-input-container{
   	  width: 37%;
   }
-<<<<<<< HEAD
+
   md-dialog{
     width: 71%;
   }
 
 .dialogdemoBasicUsage #popupContainer {
   position: relative; }
-=======
->>>>>>> f4a986e76414be5ffc8d02f6bdc48af43ac9986f
+
 
   md-grid-title.gray {
   	background-color: red;
@@ -58,6 +57,12 @@ p{
   	margin-right: 10%;
   	margin-left: 5%;
     
+  }
+
+
+
+  #addrestau{
+    width: 91%;
   }
 
   #addres{
