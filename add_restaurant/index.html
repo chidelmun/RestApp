@@ -170,7 +170,7 @@
 }]);
 
 
-app.controller('appctr', ['$scope', '$mdDialog', function($scope, $mdDialog){
+app.controller('appctr', ['$scope', '$mdDialog', function($scope, $mdDialog,$location){
   var alert;
   $scope.showDialog = showDialog;
   $scope.items = [1,2,3];
@@ -188,7 +188,7 @@ app.controller('appctr', ['$scope', '$mdDialog', function($scope, $mdDialog){
               
         '<md-input-container>' +
          '   <label>Username or Email</label>'+
-         ' <input style="width:200%" required name="clientName" ng-model="project.clientName">'+
+         ' <input style="width:200%" required name="clientName" ng-model="username">'+
            ' <div ng-messages="projectForm.clientName.$error">'+
             '<div ng-message="required">This is required.</div>'+
            ' </div>'+
@@ -196,7 +196,7 @@ app.controller('appctr', ['$scope', '$mdDialog', function($scope, $mdDialog){
 
          '<md-input-container>' +
          '   <label>Password</label>'+
-         ' <input style="width:200%" type="password" required name="clientName" ng-model="project.passwd">'+
+         ' <input  style="width:200%" type="password" required name="clientName" ng-model="passwd">'+
            ' <div ng-messages="projectForm.clientName.$error">'+
             '<div ng-message="required">This is required.</div>'+
            ' </div>'+
@@ -226,7 +226,10 @@ app.controller('appctr', ['$scope', '$mdDialog', function($scope, $mdDialog){
       });
   }
   $scope.closeDialog = function() {
+    var username = $scope.username;
+    var password = $scope.passwd;
     $mdDialog.hide();
+
   };
 }])
 .controller('DialogController', function($scope, $mdDialog) {
