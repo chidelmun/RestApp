@@ -16,134 +16,111 @@
   <title>Find meals close to you</title>
   <body layout="column" ng-controller="AppCtrl">
     <md-toolbar id="tb" layout="row">
-      <div class="md-toolbar-tools">
-        <md-button ng-click="toggleSidenav('left')" hide-gt-sm class="md-icon-button">
-          <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
-        </md-button>
-        <a href="/">
-        <img id="logo" src="http://graphics8.nytimes.com/images/2010/03/19/blogs/19cityroomMtrain/19cityroomMtrain-thumbStandard.jpg">
-        <h1 id="nam">MrMunch</h1>
-        </a>
+          <div class="md-toolbar-tools">
+            <md-button ng-click="toggleSidenav('left')" hide-gt-sm class="md-icon-button">
+              <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
+            </md-button>
+            <a href="/">
+            <img id="logo" src="http://graphics8.nytimes.com/images/2010/03/19/blogs/19cityroomMtrain/19cityroomMtrain-thumbStandard.jpg">
+            <h1 id="nam">MrMunch</h1>
+            </a>
 
-      </div><br>
-       <div ng-controller="appctr">
-    <section id="srch" layout="row" layout-sm="column" layout-align="center center">
-      <md-button class="md-raised md-primary"  ng-click="showDialog($event)"> Login</md-button>
-    </section>
-    </div>
+          </div><br>
+           <div ng-controller="appctr">
+          <section id="srch" layout="row" layout-sm="column" layout-align="center center">
+          <md-button class="md-raised md-primary"  ng-click="showDialog($event)"> Login</md-button>
+        </section>
+        </div>
   </md-toolbar>
 
+<div layout="row">
+  <div flex="15">
+   
+  </div>
 
-  <div ng-controller="AppCtrl as appCtrl"  style= "background-image: url('http://www.thelalit.com/d/the-lalit-new-delhi/media/TheLalitNewDelhi/FoodBeverage_Restaurants/24_7Restaurant/24-7RestaurantDelhi.jpg');" >
-  <md-grid-list
-        md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
-        md-row-height-gt-md="1:1" md-row-height="2:2"
-        md-gutter="12px" md-gutter-gt-sm="8px" >
+  <div flex="65">
+            <div layout="column" flex id="content">
+                <md-content layout="column" flex class="md-padding">
+                  <p style="  color: rgb(232, 148, 17);">Add New Restaurant</p>
+                    <form id="addrestau">   
+                      <md-input-container>
+                          <label>Restaurant Name</label>
+                          <input required name="clientName" ng-model="project.clientName">
+                          <div ng-messages="projectForm.clientName.$error">
+                          <div ng-message="required">This is required.</div>
+                          </div>
+                      </md-input-container>
 
+                      <md-input-container>
+                            <label>City</label>
+                            <input required name="clientName" ng-model="project.clientCity">
+                            <div ng-messages="projectForm.clientName.$error">
+                            <div ng-message="required">This is required.</div>
+                            </div>
+                      </md-input-container>
 
-        <div layout="row" flex>
-        <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
-        </md-sidenav>
+                      <md-input-container>
+                            <label>Address</label>
+                            <input required name="clientName" ng-model="project.clientAddress">
+                            <div ng-messages="projectForm.clientName.$error">
+                            <div ng-message="required">This is required.</div>
+                            </div>
+                      </md-input-container>
 
-        <div layout="column" flex id="content">
-            <md-content layout="column" flex class="md-padding">
+                      <md-input-container>
+                            <label>Phone Number</label>
+                            <input required name="clientName" ng-model="project.clientPhone">
+                            <div ng-messages="projectForm.clientName.$error">
+                            <div ng-message="required">This is required.</div>
+                            </div>
+                      </md-input-container>
 
-            <p style="  color: rgb(232, 148, 17);">Add New Restaurant</p>
-     <form id="addrestau">
-              
-        <md-input-container>
-            <label>Restaurant Name</label>
-            <input required name="clientName" ng-model="project.clientName">
-            <div ng-messages="projectForm.clientName.$error">
-            <div ng-message="required">This is required.</div>
-            </div>
-        </md-input-container>
+                      <md-input-container>
+                            <label>Email</label>
+                            <input required name="clientName" ng-model="project.clientEmail">
+                            <div ng-messages="projectForm.clientName.$error">
+                            <div ng-message="required">This is required.</div>
+                            </div>
+                      </md-input-container>
 
-      <md-input-container>
-            <label>City</label>
-            <input required name="clientName" ng-model="project.clientCity">
-            <div ng-messages="projectForm.clientName.$error">
-            <div ng-message="required">This is required.</div>
-            </div>
-      </md-input-container>
+                      <md-input-container>
+                            <label>Create Password</label>
+                            <input type="password" required name="clientName" ng-model="project.clientPasswd">
+                            <div ng-messages="projectForm.clientName.$error">
+                            <div ng-message="required">This is required.</div>
+                            </div>
+                      </md-input-container>
 
-      <md-input-container>
-            <label>Address</label>
-            <input required name="clientName" ng-model="project.clientAddress">
-            <div ng-messages="projectForm.clientName.$error">
-            <div ng-message="required">This is required.</div>
-            </div>
-      </md-input-container>
+                      <md-input-container>
+                            <label>Confirm Password</label>
+                            <input type="password" required name="clientName" ng-model="project.clientPasswd2">
+                            <div ng-messages="projectForm.clientName.$error">
+                            <div ng-message="required">This is required.</div>
+                            </div>
+                      </md-input-container>
 
-      <md-input-container>
-            <label>Phone Number</label>
-            <input required name="clientName" ng-model="project.clientPhone">
-            <div ng-messages="projectForm.clientName.$error">
-            <div ng-message="required">This is required.</div>
-            </div>
-      </md-input-container>
-
-      <md-input-container>
-            <label>Email</label>
-            <input required name="clientName" ng-model="project.clientEmail">
-            <div ng-messages="projectForm.clientName.$error">
-            <div ng-message="required">This is required.</div>
-            </div>
-      </md-input-container>
-
-      <md-input-container>
-            <label>Create Password</label>
-            <input type="password" required name="clientName" ng-model="project.clientPasswd">
-            <div ng-messages="projectForm.clientName.$error">
-            <div ng-message="required">This is required.</div>
-            </div>
-      </md-input-container>
-
-      <md-input-container>
-            <label>Confirm Password</label>
-            <input type="password" required name="clientName" ng-model="project.clientPasswd2">
-            <div ng-messages="projectForm.clientName.$error">
-            <div ng-message="required">This is required.</div>
-            </div>
-      </md-input-container>
-
-      <section id="srch" layout="row" layout-sm="column" layout-align="center center">
-      <md-button class="md-raised md-primary"> Add Restaurant</md-button>
-    </section>
-
-  </form>
-
-
-
-        </md-content>
+              <section id="srch" layout="row" layout-sm="column" layout-align="center center">
+              <md-button class="md-raised md-primary"> Add Restaurant</md-button>
+              </section>
+          </form>
+      </md-content>
     </div>
+  </div>
 
-        <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+  <div flex="15" hide-sm>
         <br><br><br>
-
         <h3>
           Sign up with one of the following providers
         </h3><br><br>
-    
-    <section id="srch" layout="row" layout-sm="column" layout-align="center center">
-      <md-button class="md-raised md-primary"> Facebook</md-button>
-    </section ><br><br>
-
-      <h1>OR</h1><br><br>
-
-    <section id="srch" layout="row" layout-sm="column" layout-align="center center">
-      <md-button style="background-color:rgb(228, 44, 12)" class="md-raised md-primary"> Google</md-button>
-    </section ><br><br>
-
-  <!--   <section id="srch" layout="row" layout-sm="column" layout-align="center center">
-      <md-button style="  background-color: rgb(12, 14, 26);" class="md-raised md-primary">Github</md-button>
-    </section ><br><br>  
- -->
-
-        </md-sidenav>
-
+        <section id="srch" layout="row" layout-sm="column" layout-align="center center">
+          <md-button class="md-raised md-primary"> Facebook</md-button>
+        </section ><br><br>
+          <h1>OR</h1><br><br>
+        <section id="srch" layout="row" layout-sm="column" layout-align="center center">
+          <md-button style="background-color:rgb(228, 44, 12)" class="md-raised md-primary"> Google</md-button>
+        </section ><br><br>  
     </div>
-
+  </div>
 
     <!-- Angular Material Dependencies -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
