@@ -45,7 +45,7 @@
                     <form ng-controller="formController" id="addrestau" action="#" method="POST" ng-submit="submit()">   
                       <md-input-container>
                           <label>Restaurant Name</label>
-                          <input required name="clientName" ng-model="project.clientName">
+                          <input required name="clientName" ng-model="restauname">
                           <div ng-messages="projectForm.clientName.$error">
                           <div ng-message="required">This is required.</div>
                           </div>
@@ -53,7 +53,7 @@
 
                       <md-input-container>
                             <label>City</label>
-                            <input required name="clientName" ng-model="project.clientCity">
+                            <input required name="clientName" ng-model="city">
                             <div ng-messages="projectForm.clientName.$error">
                             <div ng-message="required">This is required.</div>
                             </div>
@@ -61,7 +61,7 @@
 
                       <md-input-container>
                             <label>Address</label>
-                            <input required name="clientName" ng-model="project.clientAddress">
+                            <input required name="clientName" ng-model="address">
                             <div ng-messages="projectForm.clientName.$error">
                             <div ng-message="required">This is required.</div>
                             </div>
@@ -69,7 +69,7 @@
 
                       <md-input-container>
                             <label>Phone Number</label>
-                            <input required name="clientName" ng-model="project.clientPhone">
+                            <input required name="clientName" ng-model="phone">
                             <div ng-messages="projectForm.clientName.$error">
                             <div ng-message="required">This is required.</div>
                             </div>
@@ -77,7 +77,7 @@
 
                       <md-input-container>
                             <label>Email</label>
-                            <input required name="clientName" ng-model="project.clientEmail">
+                            <input required name="clientName" ng-model="email">
                             <div ng-messages="projectForm.clientName.$error">
                             <div ng-message="required">This is required.</div>
                             </div>
@@ -85,7 +85,7 @@
 
                       <md-input-container>
                             <label>Create Password</label>
-                            <input type="password" required name="clientName" ng-model="project.clientPasswd">
+                            <input type="password" required name="clientName" ng-model="passwd">
                             <div ng-messages="projectForm.clientName.$error">
                             <div ng-message="required">This is required.</div>
                             </div>
@@ -93,7 +93,7 @@
 
                       <md-input-container>
                             <label>Confirm Password</label>
-                            <input type="password" required name="clientName" ng-model="project.clientPasswd2">
+                            <input type="password" required name="clientName" ng-model="passwd2">
                             <div ng-messages="projectForm.clientName.$error">
                             <div ng-message="required">This is required.</div>
                             </div>
@@ -151,6 +151,14 @@
     $scope.submit = function(){
       alert("Form Submitted");
     }
+    $scope.restauname = "";
+    $scope.city = "";
+    $scope.address = "";
+    $scope.email = "";
+    $scope.phone = "";
+    $scope.passwd = "";
+    $scope.passwd2 = "";
+
   });
 
 
