@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <style type="text/css">
     input{
-        width: 250%;
+        width: 180%;
     }
     h1{
       margin-left: 39%;
@@ -34,15 +34,15 @@
   </md-toolbar>
 
 <div layout="row">
-  <div flex="15">
+  <div flex="20" flex-order="3">
    
   </div>
 
-  <div flex="65">
+  <div flex="65" flex-order="3">
             <div layout="column" flex id="content">
                 <md-content layout="column" flex class="md-padding">
                   <p style="  color: rgb(232, 148, 17);">Add New Restaurant</p>
-                    <form id="addrestau">   
+                    <form id="addrestau" action="#" method="POST">   
                       <md-input-container>
                           <label>Restaurant Name</label>
                           <input required name="clientName" ng-model="project.clientName">
@@ -100,14 +100,14 @@
                       </md-input-container>
 
               <section id="srch" layout="row" layout-sm="column" layout-align="center center">
-              <md-button class="md-raised md-primary"> Add Restaurant</md-button>
+              <md-button  ng-submit="alert()" class="md-raised md-primary"> Add Restaurant</md-button>
               </section>
           </form>
       </md-content>
     </div>
   </div>
 
-  <div flex="15" hide-sm>
+  <div flex="15" hide-sm flex-order="3">
         <br><br><br>
         <h3>
           Sign up with one of the following providers
