@@ -18,30 +18,22 @@
         <img id="logo" src="http://graphics8.nytimes.com/images/2010/03/19/blogs/19cityroomMtrain/19cityroomMtrain-thumbStandard.jpg">
         <h1 id="nam">MrMunch</h1>
         </a>
-    <form name="projectForm" >
-     <md-input-container  id="searchf">
-        <label>Search Meal Here</label>
-        <input required name="clientName" ng-model="message">
-        <div ng-messages="projectForm.clientName.$error">
-          <!-- <div ng-message="required">This is required.</div> -->
-        </div>
-
-      </md-input-container>
+      <form name="projectForm" >
+       <md-input-container  id="searchf">
+          <label>Search Meal Here</label>
+          <input required name="clientName" ng-model="message">
+        </md-input-container>
       </form>
   
 
      <form name="projectForm2" >
-     <md-input-container  id="searchf2">
-        <label>City</label>
-        <input required name="clientName" ng-model="project.clientCity">
-        <div ng-messages="projectForm.clientName.$error">
-        </div>
+       <md-input-container  id="searchf2">
+          <label>City</label>
+          <input required name="clientName" ng-model="city">
 
-      </md-input-container>
+        </md-input-container>
       </form>
-
-
-      </div><br>
+  </div><br>
 
     
       <section id="srch" layout="row" layout-sm="column" layout-align="center center">
