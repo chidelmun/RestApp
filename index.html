@@ -6,8 +6,9 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <title>Find meals close to you</title>
-  <body layout="column" ng-controller="AppCtrl">
-    <md-toolbar id="tb" layout="row">
+<body layout="column" ng-controller="AppCtrl">
+
+<md-toolbar id="tb" layout="row">
       <div class="md-toolbar-tools">
         <md-button ng-click="toggleSidenav('left')" hide-gt-sm class="md-icon-button">
           <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
@@ -20,7 +21,7 @@
     <form name="projectForm" >
      <md-input-container  id="searchf">
         <label>Search Meal Here</label>
-        <input required name="clientName" ng-model="project.clientName">
+        <input required name="clientName" ng-model="message">
         <div ng-messages="projectForm.clientName.$error">
           <!-- <div ng-message="required">This is required.</div> -->
         </div>
@@ -46,17 +47,16 @@
       <section id="srch" layout="row" layout-sm="column" layout-align="center center">
       <md-button class="md-raised md-primary"> Search</md-button>
     </section>
-
-    <section id="addres" layout="row" layout-sm="column" layout-align="center center">
+<section id="addres" layout="row" layout-sm="column" layout-align="center center">
       <a href="add_restaurant"> <md-button class="md-raised md-primary"> + Restaurant</md-button></a>
-    </section>
+</section>
 
     
 
-    </md-toolbar>
+</md-toolbar>
 
 
-  <div ng-controller="AppCtrl as appCtrl"  style= "background-image: url('http://everything-pr.com/wp-content/uploads/2015/08/Restaurant.jpg');" >
+<div ng-controller="AppCtrl"  style= "background-image: url('http://everything-pr.com/wp-content/uploads/2015/08/Restaurant.jpg');" >
   <md-grid-list
         md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
         md-row-height-gt-md="1:1" md-row-height="2:2"
@@ -135,29 +135,12 @@
     app.controller('AppCtrl', ['$scope', '$mdSidenav', function($scope, $mdSidenav){
       $scope.toggleSidenav = function(menuId) {
     $mdSidenav(menuId).toggle();
+
+    $scope.message = "Here is a message";
   };
  
 }]);
 
-angular.module('inputErrorsApp', ['ngMaterial', 'ngMessages'])
-.controller('AppCtrl', function($scope) {
-  $scope.project = {
-    description: 'Nuclear Missile Defense System',
-    rate: 500
-  };
-});
-
-  angular.module('gridListDemo1', ['ngMaterial'])
-.controller('AppCtrl', function($scope) {});
-
-
-angular.module('inputErrorsApp', ['ngMaterial', 'ngMessages'])
-.controller('AppCtrl', function($scope) {
-  $scope.project = {
-    description: 'Nuclear Missile Defense System',
-    rate: 500
-  };
-});
 
     </script>
 
